@@ -1,0 +1,16 @@
+[package]
+name = "browser-gui"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "rwb-gui"
+path = "src/main.rs"
+
+[dependencies]
+browser-client = { path = "../browser-client" }
+browser-protocol = { path = "../browser-protocol" }
+softbuffer = "=0.4.8"
+winit = "=0.30.12"

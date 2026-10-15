@@ -1,0 +1,18 @@
+[package]
+name = "browser-net"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[features]
+default = ["tls"]
+tls = ["dep:oxitls-rustcrypto-provider", "dep:oxitls-webpki-roots", "dep:rustls"]
+
+[dependencies]
+browser-store = { path = "../browser-store" }
+oxitls-rustcrypto-provider = { workspace = true, optional = true }
+oxitls-webpki-roots = { workspace = true, optional = true }
+rustls = { workspace = true, optional = true }
+serde.workspace = true
+url.workspace = true

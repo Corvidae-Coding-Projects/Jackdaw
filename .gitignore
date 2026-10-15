@@ -1,0 +1,53 @@
+# Rust build products and compiler artifacts
+/target/
+*.profraw
+*.profdata
+
+# Local executables copied outside Cargo's target directory
+/browserd
+/rwb
+/rwb-gui
+
+# Runtime state (profiles stay local)
+*.redb
+*.redb.*
+*.sock
+*.socket
+*.pid
+*.lock
+!/Cargo.lock
+/profiles/
+
+# Logs, caches, and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*~
+.cache/
+**/.cache/
+
+# Generated screenshots, renders, reports, and local evidence
+*.png
+*.ppm
+*.pgm
+*.rgba
+/repros/
+/reports/
+/results/
+
+# Design, qualification, and agent working state
+/design.md
+/docs/
+/.codex/
+/.peritus/
+.agent/
+
+# Editor and OS metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Do not ignore crates/browser-engine/assets or crates/browser-net/fixtures:
+# the embedded font and synthetic TLS fixtures are required source inputs.

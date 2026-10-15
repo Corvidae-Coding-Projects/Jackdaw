@@ -1,0 +1,18 @@
+[package]
+name = "browser-core"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+browser-engine = { path = "../browser-engine" }
+browser-net = { path = "../browser-net" }
+browser-protocol = { path = "../browser-protocol" }
+browser-store = { path = "../browser-store" }
+libc.workspace = true
+png = "=0.17.16"
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true

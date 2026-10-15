@@ -1,0 +1,37 @@
+[workspace]
+members = [
+    "crates/browser-client",
+    "crates/browser-cli",
+    "crates/browser-core",
+    "crates/browser-engine",
+    "crates/browser-fixtures",
+    "crates/browser-gui",
+    "crates/browser-net",
+    "crates/browser-protocol",
+    "crates/browser-store",
+    "crates/browserd",
+]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.96"
+license = "MIT"
+
+[workspace.dependencies]
+anyhow = "=1.0.100"
+blitz-dom = { version = "=0.3.0-beta.2", default-features = false }
+blitz-html = { version = "=0.3.0-beta.2", default-features = false }
+boa_engine = { version = "=0.22.0", default-features = false }
+parley = { version = "=0.11.1", default-features = false, features = ["std"] }
+png = "=0.17.16"
+libc = "=0.2.190"
+redb = { version = "=4.3.0", default-features = false, features = ["std"] }
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.154"
+sha2 = { version = "=0.10.9", default-features = false }
+rustls = { version = "=0.23.35", default-features = false, features = ["custom-provider", "std", "tls12"] }
+oxitls-rustcrypto-provider = { version = "=0.3.0", default-features = false, features = ["std", "tls12", "zeroize"] }
+oxitls-webpki-roots = { version = "=0.3.0", default-features = false }
+url = { version = "=2.5.8", features = ["serde"] }
+vello_cpu = { version = "=0.3.0", default-features = false, features = ["std", "text", "u8_pipeline"] }

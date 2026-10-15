@@ -1,0 +1,10 @@
+[package]
+name = "browser-client"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+browser-protocol = { path = "../browser-protocol" }
+serde_json.workspace = true
